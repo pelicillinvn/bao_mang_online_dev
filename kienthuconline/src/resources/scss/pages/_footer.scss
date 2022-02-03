@@ -1,0 +1,60 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        margin: 0 auto;
+    @media only screen and (max-width: 46.25em){
+        padding: 0 20px;
+    }
+    padding-top: 20px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    border-top: $color-green-boder 2px solid;
+    box-shadow: 0 -2px 2px 0 #e5e5e5;
+    
+    &__menu {
+       
+        &__list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            &__item {
+                
+                padding: 5px 30px;
+                font-size: 22px;
+                font-weight: 400;
+                color: $color-green-document;
+                @media only screen and (max-width: 64em){
+                padding: 5px 10px;
+                font-size: 14px;
+                font-weight: 300;
+                }
+                &__link {
+                    
+                }
+            }
+            &__item:first-child {
+                
+            }
+        }
+    }
+    a:hover {
+        color: $color-green-document;
+    }
+    &__email {
+        padding: 0 30px;
+        @media only screen and (max-width: 64em){
+            padding: 5px 10px;
+            }
+    }
+    &__phone {
+        padding: 0 30px;
+        @media only screen and (max-width: 64em){
+            padding: 5px 10px;
+            }
+    }
+    
+}
+
+

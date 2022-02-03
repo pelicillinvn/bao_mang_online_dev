@@ -1,0 +1,150 @@
+<div class="technology grid wide row">
+    <div class="technology__left col  c-12 l-8" id="technology__left">
+        <div class="technology__left__link">
+            <a href="/">Trang chủ</a>
+            <span>></span>
+            <a id="link__field" href="/tai-chinh">Tài chính</a>
+        </div>
+        <div class="technology__left__menu-child">
+            <ul>
+                <li><a href="/san-pham">Chứng khoán</a></li>
+                <li><a href="/internet">Bất động sản</a></li>
+                <li><a href="/game">Crypto</a></li>
+            </ul>
+        </div>
+        
+        <section class="section__group-2">
+                <div class="section__group-2__posts row">
+                    {{#each postLine_1}}
+                    <div class="section__group-2__posts__item col c-12 l-4 " data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+                        <a class="section__group-2__posts__item__link" href="/bai-viet/{{this.slug}}">
+                            <img src="{{this.image}}" alt="">
+                        </a>
+                        <a class="section__group-2__posts__item__title" href="/bai-viet/{{this.slug}}">{{this.title}}
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>  
+        </section>
+         <section class="section__group-2">
+                <div class="section__group-2__posts row">
+                    {{#each postLine_2}}
+                    <div class="section__group-2__posts__item col c-12 m-12 l-4 ">
+                        <a class="section__group-2__posts__item__link" href="/bai-viet/{{this.slug}}">
+                            <img src="{{this.image}}" alt="">
+                        </a>
+                        <a class="section__group-2__posts__item__title" href="/bai-viet/{{this.slug}}">{{this.title}}
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>  
+        </section>
+          {{#each postLine_3}}
+        <section class="section__group-3" id= "post__load" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+           
+            <div class="section__group-3__posts row">
+               
+                <div class="section__group-3__posts__link col c-4 m-4 l-4">
+                    <a class="" href="/bai-viet/{{this.slug}}">
+                    <img src="{{this.image}}" alt="{{this.title}}">
+                </a>
+                </div>
+                <div class="section__group-3__posts__content col c-8 m-8 l-8">
+                <div class="section__group-3__posts__content__title">
+                    <a href="/bai-viet/{{this.slug}}">{{this.title}}</a>
+                </div>
+                <div class="section__group-3__posts__content__description">
+                {{this.introduction}}
+                </div>
+                </div> 
+                
+            </div>
+            
+        </section>
+          {{/each}}
+          <div class="">
+            <div class=" c-o-4 m-o-5 l-5">
+            <button  id="load__more" class="btn load__more " onclick="loadFinance()" >Xem thêm</button>
+          </div>
+          </div>
+    </div>
+    <div class="technology__right col  m-4 l-4">
+        
+         <Section class="section__new-posts">
+            <div class="section__new-posts__title">Bài viết xem nhiều nhất</div>
+            {{#each postsTechnologhy_view}}
+            <div class="section__new-posts__item row no-gutters">
+                <a href="/bai-viet/{{this.slug}}" class= " l-2">
+                <img  src="{{this.image}}" alt="{{this.title}}">
+                </a>
+                <a href="/bai-viet/{{this.slug}}" class="l-10">
+                    <div class="section__new-posts__item__title ">{{this.title}}</div>
+                </a>
+            </div>
+           {{/each}}
+        </Section>
+       <Section class="section__new-posts">
+            <div class="section__new-posts__title">Có thể bạn quan tâm</div>
+            {{#each postsCare}}
+            <div class="section__new-posts__item row no-gutters">
+                <a href="/bai-viet/{{this.slug}}" class= "c-2 m-2 l-2">
+                <img  src="{{this.image}}" alt="{{this.title}}">
+                </a>
+                <a href="/bai-viet/{{this.slug}}" class="c-10 m-10 l-10">
+                    <div class="section__new-posts__item__title ">{{this.title}}</div>
+                </a>
+            </div>
+           {{/each}}
+        </Section>
+       
+    </div>
+    
+</div>
+<script>
+    var postLoad = document.getElementById('post__load');
+     
+    var currentPage = 1 ;
+    function loadFinance() {
+        currentPage++
+        console.log(currentPage)
+        
+        fetch(`http://localhost:3005/tai-chinh?page=${currentPage}`)
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data.length)
+            for(let i = 0; i < data.length; i++) {
+                const element = data[i];
+               
+                 var item = `  
+                
+                    <div class="section__group-3__posts row">
+                        <div class="section__group-3__posts__link col c-4 m-4 l-4">
+                            <a class="" href="/bai-viet/${element.slug}">
+                                <img src="${element.image}" alt="${element.title}">
+                            </a>
+                        </div>
+                        <div class="section__group-3__posts__content col c-8 m-8 l-8">
+                            <div class="section__group-3__posts__content__title">
+                            <a href="/bai-viet/${element.slug}">${element.title}</a>
+                            </div>
+                            <div class="section__group-3__posts__content__description">
+                            ${element.introduction}
+                            </div>
+                        </div> 
+                    </div>
+               
+               `;
+                
+                
+              
+               postLoad.innerHTML = postLoad.innerHTML + item ;
+              // console.log(document.querySelector('#post__load').innerHTML + item)
+            }
+           
+        });
+        console.log(postLoad)
+    }
+    
+</script>

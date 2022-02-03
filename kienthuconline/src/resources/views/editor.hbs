@@ -1,0 +1,134 @@
+<div class="technology__left__link">
+    <a href="/admin">Admin</a>
+    <span>></span>
+    <a href="/tao-bai-viet">Viết bài</a>
+</div>
+<div class="editor">
+    <h1>Bài viết mới</h1>
+
+    <div class="editor__form">
+        <div class="editor__form__group">
+            <label for="post__title" class="editor__form__group__title"><span><i class='bx bxs-edit-alt'></i></span>Tiêu
+                đề</label>
+            <div>
+                <input type="text" class="editor__form__group__input" id="post__title" autofocus placeholder="">
+            </div>
+        </div>
+        <div class="editor__form__group">
+            <label for="image" class="editor__form__group__title"><span><i class='bx bxs-edit-alt'></i></span>Ảnh tiêu
+                đề</label>
+            <div>
+                <input type="text" class="editor__form__group__input" id="image" placeholder="">
+            </div>
+        </div>
+        <div class="editor__form__group">
+            <select class="editor__form__select" id="field">
+                <option selected>Lĩnh vực</option>
+                <option value="cong-nghe">Công nghệ</option>
+                <option value="lap-trinh">Lập trình</option>
+                <option value="du-lich">Du lịch</option>
+                <option value="tai-chinh">Tài chính</option>
+                <option value="khoa-hoc">Khoa học</option>
+                <option value="du-lich">Giáo dục</option>
+                <option value="am-thuc">Ẩm thực</option>
+            </select>
+        </div>
+        <div class="editor__form__group">
+            <label for="introduction" class="editor__form__group__title"><span><i
+                        class='bx bxs-edit-alt'></i></span>Giới thiệu</label>
+            <div>
+                <textarea type="text" class="editor__form__group__textarea" id="introduction" placeholder=""></textarea>
+            </div>
+        </div>
+        <div class="editor__form__group">
+            <label for="description" class="editor__form__group__description"><span><i
+                        class='bx bxs-edit-alt'></i></span>Nội dung</label>
+            <div id="toolbar-container"></div>
+            <div id="editor"></div>
+
+        </div>
+        <div class="editor__form__group">
+            <button class="btn"><a href="/" class="">Quay lại</a></button>
+            <button class="btn" id="submit">Lưu</button>
+            <button class="navbar__container__logout btn" id="navbar__container__logout">Đăng xuất</button>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let editor;
+    DecoupledEditor
+        .create(document.querySelector('#editor'),)
+        .then(newEditor =>
+        {
+            editor = newEditor;
+            const toolbarContainer = document.querySelector('#toolbar-container');
+            toolbarContainer.appendChild(newEditor.ui.view.toolbar.element);
+        })
+        .catch(error =>
+        {
+            console.error(error);
+        });
+
+
+    document.querySelector('#submit').addEventListener('click', () =>
+    {
+        console.log('click');
+        var d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth() + 1;
+        var year = d.getFullYear();
+        var date = `Ngày ${day}/${month}/${year}`;
+
+
+        var fieldData = document.querySelector('#field').value;
+        var titleData = document.querySelector('#post__title').value;
+        var introductionData = document.querySelector('#introduction').value;
+        var imageData = document.querySelector('#image').value;
+
+
+
+        const editorData = editor.getData();
+        async function postData(url = '', data = {})
+        {
+            // Default options are marked with *
+            const response = await fetch(url, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, *same-origin, omit
+                headers: {
+                   'Content-Type': 'application/json',
+                   
+                },
+                redirect: 'follow', // manual, *follow, error
+                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                body: JSON.stringify(data) // body data type must match "Content-Type" header
+            });
+            return response.json(); // parses JSON response into native JavaScript objects
+        }
+
+
+
+        postData('http://localhost:3005/admin/tao-bai-viet/upload', {
+            description: editorData,
+            title: titleData,
+            field: fieldData,
+            introduction: introductionData,
+            image: imageData,
+            date: date,
+            count: 0,
+
+        })
+        .then(data => {
+            location.replace("http://localhost:3005/admin/tao-bai-viet");
+            console.log(data); // JSON data parsed by `data.json()` call
+  });
+
+
+
+
+    });
+</script>

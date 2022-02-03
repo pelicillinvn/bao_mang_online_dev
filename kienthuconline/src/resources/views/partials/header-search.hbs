@@ -1,0 +1,130 @@
+<nav class="navbar">
+  <div class="navbar__container">
+
+    <div class="navbar__container__brand">
+      <div class="navbar__container__brand__menu">
+        <div class="navbar__container__brand__menu__item"><i class='icon bx bx-menu'></i></div>
+        <div class="navbar__container__brand__menu__circle"><i class='icon bx bx-x'></i></div>
+      </div>
+      <a class="navbar__container__brand__title">Kiến thức online</a>
+    </div>
+    <form class="navbar__container__search" method="POST" action="/tim-kiem">
+      <input class="navbar__container__search__input" type="text" name="q" placeholder="Tìm kiếm"  value="{{keyWord}}" aria-label="Search">
+      <button class="button button__search" type="submit"><i class='bx bx-search-alt'></i></button>
+    </form>
+    <div class="navbar__container__login" id="navbar__container__login">
+      <a class="navbar__container__login__link" href="/dang-nhap">
+        <span><i class='bx bx-user'></i></span>
+        <span class="navbar__container__login__text">Đăng nhập</span>
+      </a>
+    </div>
+    <div class="navbar__user" id="navbar__user">
+
+
+    </div>
+  </div>
+</nav>
+
+{{#if user}}
+
+<script>
+  
+  var userLogin = document.querySelector('#navbar__container__login');
+  userLogin.style.display = 'none';
+  var userInformation = document.querySelector('#navbar__user');
+  userInformation.style.display = 'block';
+  userInformation.innerHTML = `
+    <div class="navbar__user__information" id="navbar__user__information">
+        <div class="navbar__user__information-avatar">
+          <img src="https://media.istockphoto.com/photos/dog-wearing-glasses-2022-for-the-new-year-golden-retriever-for-sits-picture-id1351051435?b=1&k=20&m=1351051435&s=170667a&w=0&h=f3gZiyoxnMvZDQC4_u1--Lh9ynObHGVQHSNZgxjz48I=" alt="">
+        </div>
+        <div class="navbar__user__information-name">{{user.fullname}}</div>
+        
+        <div class="navbar__user__information-icon-down"><i class='bx bxs-down-arrow'></i></div>
+        <div class="navbar__user__information-icon-up"><i class='bx bxs-up-arrow'></i></div>
+        
+    </div>
+        <ul class="navbar__user__dropdown">
+          <li class="navbar__user__dropdown__item"><a href="/admin">Dashboard</a></li>
+          <li class="navbar__user__dropdown__item"><a href="/admin/bai-dang">Bài đăng</a></li>
+          <li class="navbar__user__dropdown__item"><a href="/admin/tao-bai-viet">Viết bài</a></li>
+          <li class="navbar__user__dropdown__item navbar__container__logout"><a href="">Đăng xuất</a></li>
+        </ul>
+    `;
+     //gửi refreshToken lên sever để lấy acessToken sau 1 khoảng thời gian
+
+
+  async function postData3(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+  var refreshToken2 = getCookie('refreshToken');
+  let handleToken= setInterval(
+   
+   
+      postData3('http://localhost:4000/token', { refreshToken: refreshToken2 })
+        .then(data => {
+          console.log('refresh',data);
+          setCookie('Authorization', 
+                    
+          data.accessToken
+
+
+     , 1);
+     setCookie('refreshToken', 
+     
+     data.refreshToken
+
+
+, 1)  // JSON data parsed by `data.json()` call
+        }), 
+      300000);
+</script>
+{{/if}}
+{{#unless user}}
+
+<script>
+  var userLogin = document.querySelector('#navbar__container__login');
+  userLogin.style.display = 'block';
+  var userInformation = document.querySelector('#navbar__user');
+  userInformation.style.display = 'none';
+  userInformation.innerHTML = ``;
+</script>
+{{/unless}}
+
+<script>
+  var iconDropdown = document.querySelector('.navbar__user__information-icon-down');
+  var iconDropup = document.querySelector('.navbar__user__information-icon-up');
+
+  var handleDropdown = document.querySelector('.navbar__user__dropdown');
+  iconDropdown.onclick = () =>
+  {
+    handleDropdown.style.display = 'block';
+    iconDropup.style.display = 'block';
+    iconDropdown.style.display = 'none';
+
+  }
+  iconDropup.onclick = () =>
+  {
+    handleDropdown.style.display = 'none'
+    iconDropup.style.display = 'none';
+    iconDropdown.style.display = 'block';
+  }
+
+  //chức năng tìm kiếm
+
+</script>

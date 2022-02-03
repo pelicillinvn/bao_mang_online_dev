@@ -1,0 +1,258 @@
+ Phím tắt	Chức năng
+Ctrl + Shift + P	Mở Command Palette
+Ctrl + ,	Mở cài đặt ứng dụng
+Ctrl + K, Ctrl + S	Hiển thị phím tắt
+Ctrl + Shift + X	Chuyển sang bảng điều khiển Extensions
+Ctrl + N	File mới
+Ctrl + Shift + N	Cửa sổ mới
+Ctrl + F4	Đóng file
+Ctrl + Shift + W	Đóng cửa sổ
+F11	Bật chế độ toàn màn hình
+Ctrl + B	Chuyển sang chế độ hiển thị thanh bên
+2. Phím tắt quản lý file
+Phím tắt	Chức năng
+Ctrl + O	Mở file
+Ctrl + S	Lưu file
+Ctrl + Shift + S	Lưu file dưới dạng...
+Ctrl + K, S	Lưu tất cả file
+Ctrl + K, Ctrl + W	Đóng tất cả file
+Ctrl + Shift + T	Mở lại file đã đóng gần nhất
+3. Phím tắt chỉnh sửa lệnh
+Phím tắt	Chức năng
+Ctrl + C	Sao chép vùng chọn hoặc dòng hiện tại
+Ctrl + X	Cắt vùng chọn hoặc dòng hiện tại
+Ctrl + V	Dán
+Ctrl + Shift + K	Xóa dòng
+Home	Đi đến đầu dòng
+End	Đi đến cuối dòng
+Ctrl + Home	Đi đến đầu file
+Ctrl + End	Đi đến cuối file
+Alt + Mũi tên lên/xuống	Di chuyển lên hoặc xuống
+Ctrl + ]	Tăng thụt lề dòng
+Ctrl + [	Giảm thụt lề dòng
+Ctrl + /	Chú thích cho một dòng
+Shift + Alt + A	Chú thích cho một region (đoạn code)
+4. Phím tắt Thu gọn code (Folding)
+Phím tắt	Chức năng
+Ctrl + Shift + [	Thu gọn một region
+Ctrl + Shift + ]	Bỏ thu gọn một region
+Ctrl + K, Ctrl + [	Thu gọn tất cả subregion
+Ctrl + K, Ctrl + ]	Bỏ thu gọn tất cả subregion
+Ctrl + K, Ctrl + 0	Thu gọn tất cả region
+Ctrl + K, Ctrl + J	Bỏ thu gọn tất cả region
+5. Phím tắt Điều hướng trình chỉnh sửa
+Phím tắt	Chức năng
+Ctrl + P	Đi đến file
+Ctrl + G	Đi đến line
+Ctrl + T	Hiển thị tất cả các biểu tượng
+Ctrl + Shift + O	Đi đến biểu tượng
+F8	Chuyển đến lỗi hoặc cảnh báo tiếp theo
+Shift + F8	Quay lại lỗi hoặc cảnh báo trước đó
+Ctrl + Shift + M	Hiển thị bảng điều khiển Problems
+Alt + Mũi tên trái	Trở lại
+Alt + Mũi tên phải	Tiến lên
+6. Phím tắt Tìm và thay thế
+Phím tắt	Chức năng
+Ctrl + F	Mở hộp thoại Find
+Ctrl + H	Mở hộp thoại Replace
+Ctrl + Shift + H	Thay thế trong file
+F3	Tìm cụm từ tìm kiếm khớp tiếp theo
+Shift + F3	Tìm cụm từ tìm kiếm khớp trước đó
+Alt + Enter	Chọn tất cả các kết quả phù hợp với cụm từ tìm kiếm
+Ctrl + D	Thêm vùng chọn hiện tại vào kết quả Find phù hợp
+Ctrl + K, Ctrl + D	Di chuyển vùng chọn trước đó vào kết quả Find phù hợp tiếp theo
+7. Quản lý việc chia nhỏ trình chỉnh sửa
+Phím tắt	Chức năng
+Ctrl + \	Chia trình chỉnh sửa ra
+Ctrl + 1/2/3	Chuyển đến cửa sổ trình chỉnh sửa 1, 2, 3
+Ctrl + K, Ctrl + Mũi tên phải/trái	Chuyển đến cửa sổ trình chỉnh sửa tiếp theo/trước đó
+Ctrl + Shift + PgUp	Di chuyển trình chỉnh sửa sang trái
+Ctrl + Shift + PgDown	Di chuyển trình chỉnh sửa sang phải
+8. Lựa chọn và đa con trỏ
+Phím tắt	Chức năng
+Ctrl + L	Chọn dòng hiện tại
+Ctrl + Shift + L	Chọn tất cả các lần xuất hiện của lựa chọn hiện tại
+Ctrl + F2	Chọn tất cả các kết quả phù hợp của từ hiện tại
+Shift + Alt + Mũi tên phải	Mở rộng lựa chọn
+Shift + Alt + Mũi tên trái	Thu hẹp lựa chọn
+Alt + Nhấp chuột	Chèn con trỏ
+Ctrl + Alt + Mũi tên lên/xuống	Chèn con trỏ trên hoặc dưới dòng hiện tại
+Ctrl + U	Hoàn tác con trỏ gần nhất
+Shift + Alt + I	Chèn con trỏ ở cuối mỗi dòng được chọn
+9. Terminal tích hợp
+Phím tắt	Chức năng
+Ctrl + `	Hiển thị terminal tích hợp
+Ctrl + Shift + `	Tạo phiên bản terminal mới
+Ctrl + Mũi tên lên/xuống	Cuộn lên/xuống
+Ctrl + Home/End	Cuộn lên trên cùng/xuống dưới cùng
+10. Phím tắt dành riêng cho macOS
+Phím tắt	Chức năng
+Cmd + W	Đóng file
+Cmd + Ctrl + F	Bật chế độ toàn màn hình
+Cmd + -	Lùi lại
+Cmd + Shift + -	Tiến lên
+Cmd + G	Tìm cụm từ tìm kiếm khớp tiếp theo
+Cmd + Shift + G	Tìm cụm từ tìm kiếm khớp trước đó
+Cmd + Control + Shift + Mũi tên phải	Mở rộng lựa chọn
+Cmd + Control + Shift + Mũi tên trái	Thu hẹp lựa chọn
+Cmd + K, Cmd + Shift + Mũi tên trái	Di chuyển trình chỉnh sửa sang trái
+Cmd + K, Cmd + Shift + Mũi tên phải	Di chuyển trình chỉnh sửa trái
+Control + `	Hiển thị terminal tích hợp
+Control + Shift + `	Tạo phiên bản terminal mới
+ <script>
+    class MyUploadAdapter {
+    constructor( loader ) {
+        // Phiên bản trình tải tệp để sử dụng trong quá trình tải lên.
+        this.loader = loader;
+    }
+
+    // Bắt đầu quá trình tải lên.
+    upload() {
+        return this.loader.file
+            .then( file => new Promise( ( resolve, reject ) => {
+                this._initRequest();
+                this._initListeners( resolve, reject, file );
+                this._sendRequest( file );
+            } ) );
+    }
+
+    // Aborts the upload process.
+    abort() {
+        if ( this.xhr ) {
+            this.xhr.abort();
+        }
+    }
+
+    // Khởi tạo đối tượng XMLHttpRequest bằng cách sử dụng URL được chuyển đến hàm tạo
+    _initRequest() {
+        const xhr = this.xhr = new XMLHttpRequest();
+
+        // Lưu ý rằng yêu cầu của bạn có thể trông khác. Tùy thuộc vào bạn và biên tập viên 
+        // tích hợp của bạn để chọn kênh giao tiếp phù hợp. Ví dụ này sử dụng 
+        // một yêu cầu POST với JSON làm cấu trúc dữ liệu nhưng 
+        // cấu hình của bạn có thể khác.
+        xhr.open( 'POST', `http://localhost:3005/image/upload`, true );
+        xhr.responseType = 'json';
+    }
+
+    // Khởi tạo trình nghe XMLHttpRequest.
+    _initListeners( resolve, reject, file ) {
+        const xhr = this.xhr;
+        const loader = this.loader;
+        const genericErrorText = `Couldn't upload file: ${ file.name }.`;
+
+        xhr.addEventListener( 'error', () => reject( genericErrorText ) );
+        xhr.addEventListener( 'abort', () => reject() );
+        xhr.addEventListener( 'load', () => {
+            const response = xhr.response;
+            
+            // Ví dụ này giả định đối tượng "phản hồi" của máy chủ XHR sẽ đi kèm với 
+            // một "lỗi" có "thông báo" riêng có thể được chuyển đến từ chối () 
+            // trong lời hứa tải lên. // 
+            // Tích hợp của bạn có thể xử lý lỗi tải lên theo một cách khác, vì vậy hãy đảm bảo 
+            // quá trình này được thực hiện đúng cách. Hàm từ chối () phải được gọi khi tải lên không thành công.
+            if ( !response || response.error ) {
+                return reject( response && response.error ? response.error.message : genericErrorText );
+            }
+
+            // Nếu tải lên thành công, hãy giải quyết lời hứa tải lên bằng một đối tượng chứa 
+            // ít nhất là URL "mặc định", trỏ đến hình ảnh trên máy chủ. 
+            // URL này sẽ được sử dụng để hiển thị hình ảnh trong nội dung. Tìm hiểu thêm trong 
+            // tài liệu tải lên UploadAdapter #.
+            resolve( {
+                default: response.url
+                
+            } );
+        } );
+
+        // Tiến trình tải lên khi nó được hỗ trợ. Trình tải tệp có #uploadTotal và #uploaded 
+        // thuộc tính được sử dụng, ví dụ: để hiển thị thanh tiến trình tải lên trong trình chỉnh sửa 
+        // giao diện người dùng.
+        if ( xhr.upload ) {
+            xhr.upload.addEventListener( 'progress', evt => {
+                if ( evt.lengthComputable ) {
+                    loader.uploadTotal = evt.total;
+                    loader.uploaded = evt.loaded;
+                }
+            } );
+        }
+    }
+
+    // Chuẩn bị dữ liệu và gửi yêu cầu.
+      _sendRequest( file ) {
+        // Chuẩn bị dữ liệu biểu mẫu.
+       
+          const data = new FormData();
+          data.append( 'upload', file );
+          console.log(file);
+          console.log(data);
+
+          this.xhr.setRequestHeader('Content-type', 'multipart/form-data');
+          this.xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            this.xhr.onreadystatechange = function() { // Call a function when the state changes.application/x-www-form-urlencoded
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        // Request finished. Do processing here.
+         var response = JSON.parse(this.xhr.responseText);
+                console.log(response);
+    }
+}
+        // Lưu ý quan trọng: Đây là nơi thích hợp để triển khai các cơ chế bảo mật 
+        // như xác thực và bảo vệ CSRF. Ví dụ: bạn có thể sử dụng 
+        // XMLHttpRequest.setRequestHeader () để đặt các tiêu đề yêu cầu chứa 
+        // mã thông báo CSRF do ứng dụng của bạn tạo trước đó. 
+        // Gửi yêu cầu.
+          this.xhr.send( data );
+        
+    }
+}
+
+// ...
+
+function MyCustomUploadAdapterPlugin( editor ) {
+    editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
+        // Định cấu hình URL cho tập lệnh tải lên trong back-end của bạn tại đây!
+         
+        return new MyUploadAdapter( loader );
+    };
+    
+}
+
+// ...
+
+
+
+</script>
+      <script>
+          DecoupledEditor
+        .create( document.querySelector( '#editor' ), {
+        extraPlugins: [ MyCustomUploadAdapterPlugin ],
+
+        // ...
+    } )
+        .then( editor => {
+            const toolbarContainer = document.querySelector( '#toolbar-container' );
+
+            toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+        
+    </script>
+
+
+
+    if (editorData && titleData) {
+          postData('http://localhost:3005/tao-bai-viet/upload', { 
+               description: editorData, 
+               title:titleData, 
+               field: fieldData,
+               introduction:introductionData,
+               image:imageData,
+               date: date,
+               count: 0,
+          })
+     }
+     else {
+          alert('Bạn chưa nhập nội dung')
+     }

@@ -1,0 +1,73 @@
+.editor {
+  padding: 0 4%;
+  &__form {
+    margin-top: 20px;
+    &__group {
+      margin-bottom: 10px;
+      &__input {
+        font-size: 16px;
+        font-weight: 600;
+        
+        
+      }
+      textarea {
+        width: 100%;
+        min-height: 100px;
+        outline: none;
+        margin-top: 10px;
+        padding: 5px;
+        border: $color-green-boder 2px solid;
+        border-radius: 3px;
+      }
+      label {
+        padding: 10px 10px;
+        color: $color-green-document;
+        font-size: 16px;
+        i {
+          font-size: 20px;
+          color: $color-green;
+          padding: 5px 5px 5px 0;
+        }
+
+      }
+     
+
+      input {
+        width: 100%;
+        height: 30px;
+        border: $color-green-boder 2px solid;
+        border-radius: 3px;
+        padding-left: 5px;
+        
+      }
+     #editor-container {
+       img {
+         width:800px;
+         height: 150px;
+        margin: 0 auto;
+       }
+     }
+     #toolbar-container {
+       margin-top: 10px;
+     }
+     #editor {
+      min-height: 350px;
+     }
+    }
+    &__select {
+      padding: 5px 5px;
+      outline: none;
+      border: #ccc 1px solid;
+      width: 100%;
+      text-align: center;
+      border: $color-green-boder 2px solid;
+      border-radius: 3px;
+      margin-top: 10px; 
+      option {
+        padding: 6px 6px;
+        margin-top: 10px;
+        
+      }
+    }
+  }
+}

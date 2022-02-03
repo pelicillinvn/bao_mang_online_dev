@@ -1,0 +1,52 @@
+<div class="post row  grid wide ">
+    <div class="post__container row col c-8 m-8 l-8">
+        <div class="technology__left__link">
+                <a href="/">Trang chủ</a>
+                <span>></span>
+                <a id="link__field"  href="/{{postView.field}}"></a>
+               
+        </div>
+        <div class="post__item" id= "post__item">
+        
+            <div class="post__item__title">{{postView.title}}</div>
+            <div class="post__item__description" id= "post__description">{{{postView.description}}}</div>
+            <div class="post__item__date">{{postView.date}}</div>
+        </div>
+    </div>
+     <div class="home__right col c-4 m-4 l-4">
+        <Section class="section__new-posts">
+            <div class="section__new-posts__title">Bài viết cùng chuyên mục</div>
+            {{#each postsField}}
+            <div class="section__new-posts__item row no-gutters">
+                <a href="/bai-viet/{{this.slug}}" class= "c-2 m-2 l-2">
+                <img  src="{{this.image}}" alt="">
+                </a>
+                <a href="/bai-viet/{{this.slug}}" class="c-10 m-10 l-10">
+                    <div class="section__new-posts__item__title ">{{this.title}}</div>
+                </a>
+            </div>
+             {{/each}}
+           
+        </Section>
+        
+         <Section class="section__new-posts">
+            <div class="section__new-posts__title">Bài viết xem nhiều nhất</div>
+            {{#each postsMaxView}}
+            <div class="section__new-posts__item row no-gutters">
+                <a href="/bai-viet/{{this.slug}}" class= "c-2 m-2 l-2">
+                <img  src="{{this.image}}" alt="">
+                </a>
+                <a href="/bai-viet/{{this.slug}}" class="c-10 m-10 l-10">
+                    <div class="section__new-posts__item__title ">{{this.title}}</div>
+                </a>
+            </div>
+             {{/each}}
+           
+        </Section>
+       
+    </div>
+</div>
+
+
+            
+

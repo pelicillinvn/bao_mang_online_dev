@@ -1,0 +1,33 @@
+.post {
+  .post__container {
+    box-shadow: 0px 0px 5px 1px #ccc;
+    padding-bottom: 40px;
+    margin-bottom: 2px;
+    line-height: 1.5;
+ 
+  img {
+    margin: 15px auto;
+  }
+  .technology__left__link {
+    a {
+      font-size: 16px;
+      color: $color-green-document;
+    }
+  }
+  .post__item {
+    margin: 0 10px 10px 15px;
+    &__title {
+      font-size: 18px;
+      color: #000;
+      font-weight: 500;
+    }
+    &__description__block {
+      display: none;
+    }
+    &__date {
+      color: rgb(161, 158, 158);
+      text-align: right;
+    }
+  }
+}
+}
